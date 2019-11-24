@@ -50,7 +50,7 @@ navigator.getBattery().then(function(battery){
     }
     else if(battery.level>=0.6 && battery.level<0.9){
     a.innerHTML="&#xf241";
-    colors.style.color="blue";
+    colors.style.color=" rgb(193, 255, 47)";
     }
     else if(battery.level>0.4 && battery.level<0.6){
     a.innerHTML="&#xf242";
