@@ -26,8 +26,8 @@ navigator.getBattery().then(function(battery){
     let level = Math.floor(battery.level * 100) + '%';
     document.getElementById("levels").innerHTML = level;
     
-    // Checking battery status
-    var charge = (battery.charging ? "  charging" : "  discharging") ;
+    // Checking battery status'
+    var charge = (battery.charging ? "  charging" : "  discharged");
     charging.innerHTML=charge;
     
     // If device is charging
