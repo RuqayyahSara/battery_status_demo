@@ -20,18 +20,24 @@ var colors = document.querySelector(".fa");
 var a = document.getElementById("batteryStatus");
 var charging = document.getElementById("charging");
 var time = document.getElementById("time");
-
+var source = document.getElementById("source");
 navigator.getBattery().then(function(battery){
     // calculating battery percentage
     let level = Math.floor(battery.level * 100) + '%';
     document.getElementById("levels").innerHTML = level;
     
-    // Checking battery status'
-    var charge = (battery.charging ? "  charging" : "  discharged");
+    // Checking battery status
+    var charge = (battery.charging ? "  charging" : "  uncharged");
     charging.innerHTML=charge;
     
+    // Checking Power Source
+    if(battery.charging)
+    source.innerHTML="Adapter";
+    else
+    source.innerHTML="Battery";
+    
     // If device is charging
-    if(battery.charging===true){
+    if(battery.charging){
     var timeLeft = battery.chargingTime / 3600;
     time.innerHTML=  ""+timeLeft.toFixed(2)+" hr (to charge)";
     setInterval(cbattery,2600);

@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Show battery Status</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <style>
-     .fa{font-size: 300px;margin-left:480px;}
-     #p{font-size: 70px;margin-left:380px;margin-bottom:-10px;}   
+     .fa{font-size: 300px;margin-left:480px;margin-top:-80px;}
+     #p{font-size: 70px;margin-left:380px;margin-top:0px}   
      body{background-color: rgb(255, 246, 246)}
-     p{font-size: 30px;margin-left:380px;}
+     p{font-size: 30px;margin-left:490px;margin-top:0px;}
     </style>
    </head> 
 
   <body>
    <p id="p">Battery Level: <b id="levels"></b></p> 
    <div class="fa" id="batteryStatus"></div>
-   <p>Battery status:<b id="charging"></b></b> 
-      <br><br>
-      Time left: <b id="time"></b></p>  
 
-<br><br><br>
-  <footer class="fa fa-github" style="font-size:20px;padding:6px 6px;border:1px solid rgb(199, 199, 206)">&nbsp;&nbsp;<a href="https://github.com/RuqayyahSara/battery_status_demo" style="color:midnightblue;text-decoration:none;">If you love it, fork it!</a></footer>      
+   <p> Power Source: <b id="source"></b>
+      <br><br>
+      Battery status:<b id="charging"></b>
+      <br><br>
+      Time left: <b id="time"></b>
+    </p>  
+
+
+  <footer class="fa fa-github" style="font-size:20px;padding:6px 6px;margin-top:50px;margin-left:550px;border:1px solid rgb(199, 199, 206)">&nbsp;&nbsp;<a href="https://github.com/RuqayyahSara/battery_status_demo" style="color:midnightblue;text-decoration:none;">If you love it, fork it!</a></footer>      
   <script src="main.js"></script>
 </body>
 </html>
